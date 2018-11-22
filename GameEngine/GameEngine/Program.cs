@@ -10,7 +10,12 @@ namespace GameEngine
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Do stuff!");
+            //illegal construct
+            //Player player = new Player();
+
+            //get the only Player object
+            Player player = Player.getInstance();
+            player.DoStuff();
             Console.ReadLine();
         }
     }
