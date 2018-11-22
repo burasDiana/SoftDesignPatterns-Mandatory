@@ -20,9 +20,9 @@ namespace GameEngine
             return _instance;
         }
 
-        public void DoStuff()
+        public void DoStuff(Game game)
         {
-            Console.WriteLine("Doing stuff...");
+            Console.WriteLine("Playing " + game.Title);
         }
     }
 }
