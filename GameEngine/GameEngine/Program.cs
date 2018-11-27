@@ -12,11 +12,19 @@ namespace GameEngine
         {
             //illegal construct
             //Player player = new Player();
-
+            Game game = new Game()
+            {
+                Title = "Game1",
+                Genre = "Action-Adventure",
+                ReleaseDate = new DateTime(2013, 04, 28),
+            };
             //get the only Player object
             Player player = Player.getInstance();
-            player.DoStuff();
+            player.DoStuff(game);
+
+            //Console.WriteLine(student.getState().ToString());
             Console.ReadLine();
         }
+
     }
 }
