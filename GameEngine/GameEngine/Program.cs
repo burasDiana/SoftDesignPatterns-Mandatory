@@ -22,7 +22,6 @@ namespace GameEngine
             Player player = Player.getInstance();
             player.DoStuff(game);
 
-            //Console.WriteLine(student.getState().ToString());
             Console.ReadLine();
         }
 
