@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameEngine
+namespace StatePatternDemo
 {
-    class SleepState : State
+    class StudentSleepState : State
     {
         public void DoAction(Student student)
         {

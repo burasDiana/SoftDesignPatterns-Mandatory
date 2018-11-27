@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameEngine
+namespace StatePatternDemo
 {
-    class SchoolState : State
+    class StudentSchoolState : State
     {
         public void DoAction(Student student)
         {
-            Console.WriteLine("Student is in at school state");
+            Console.WriteLine("Student is in school state");
             student.setState(this);
         }
     }

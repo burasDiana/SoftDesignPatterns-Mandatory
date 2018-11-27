@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameEngine
+namespace StatePatternDemo
 {
     class Student
     {
@@ -24,6 +24,5 @@ namespace GameEngine
         {
             return state;
         }
-
     }
 }

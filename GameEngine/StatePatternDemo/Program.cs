@@ -11,10 +11,10 @@ namespace StatePatternDemo
         static void Main(string[] args)
         {
             Student student = new Student();
-            SleepState sleepState = new SleepState();
+            StudentSleepState sleepState = new StudentSleepState();
             sleepState.DoAction(student);
             Console.WriteLine(student.getState().ToString());
-            SchoolState atSchoolState = new SchoolState();
+            StudentSchoolState atSchoolState = new StudentSchoolState();
             atSchoolState.DoAction(student);
             Console.WriteLine(student.getState().ToString());
             Console.ReadLine();
