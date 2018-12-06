@@ -10,49 +10,42 @@ namespace GameEngine
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            if (i > 0)
-            {
-                //illegal construct
-                //Player player = new Player();
-                Game game = new Game()
-                {
-                    Title = "Game1",
-                    Genre = "Action-Adventure",
-                    ReleaseDate = new DateTime(2013, 04, 28),
-                };
-                //get the only Player object
-                Player player = Player.getInstance();
-                player.DoStuff(game);
+            //illegal construct
+            //Player player = new Player();
+            //Game game = new Game()
+            //{
+            //    Title = "Game1",
+            //    Genre = "Action-Adventure",
+            //};
+            ////get the only Player object
+            //Player playerMachine = Player.getInstance();
+            //playerMachine.PlayGame(game);
 
-                Console.ReadLine();
-            }
+            DataSource data = new DataSource();
 
-            int[] depFlights = new[] {1, 2, 3, 4};
-            int[] arrFlights = new[] {10, 20, 30};
+            FilterCriteria adventure = new CriteriaAdventure();
+            FilterCriteria top5 = new CriteriaTop5();
+            FilterCriteria newest = new CriteriaThisYear();
+            FilterCriteria top5andnewest = new AndCriteria( top5,newest);
 
-            Console.WriteLine("The pairs are:" + '\n');
+            Console.WriteLine("\nAdventure :");
+            PrintResults(adventure.MeetCriteria(data.GetGames()));
 
-            foreach (var pair in CreatePairs(depFlights,arrFlights))
-            {
-                Console.WriteLine(pair + '\n');
-            }
+            Console.WriteLine("\nTop 5 :");
+            PrintResults(top5.MeetCriteria(data.GetGames()));
+
+            Console.WriteLine("\nTop 5 and newest :");
+            PrintResults(top5andnewest.MeetCriteria(data.GetGames()));
 
             Console.ReadLine();
         }
 
-        private static List<string> CreatePairs(int[] depFlights, int[]arrFlights)
+        public static void PrintResults(List<Game> filteredGames)
         {
-            List<string> results = new List<string>();
-            int i = 0;
-            foreach (var d in depFlights)
+            foreach (var game in filteredGames)
             {
-                foreach (var a in arrFlights)
-                {
-                    results.Add(d + "-" + a);
-                }
+                Console.WriteLine("Game : [Title: " + game.Title + ", Genre: "+ game.Get_Genre() + ", Released: " + game.ReleaseYear + ", Score :" + game.PopularityPercent + "% ]");
             }
-            return results;
         }
     }
 }
