@@ -1,7 +1,7 @@
 
 singleton can be the player class (as there should only be one playermachine)
 filter to filter the list of games
-adaptor to play the different types of games from 1 player
+adaptor to play the different types of games from 1 player (plug in adapters)
 decorator pattern for the DLC to be bought on the games
 can also add state pattern to switch states : play game, list games, standby
 
