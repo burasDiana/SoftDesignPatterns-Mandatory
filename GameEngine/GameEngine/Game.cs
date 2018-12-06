@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace GameEngine
 {
-    class Game
+    public class Game
     {
-        public string Title { get; set; }
-        public string Genre { get; set; }
-        public DateTime ReleaseDate { get; set; } // to filter by
+        public string Title { get; set; } //generates auto-property
+        public enum GenreTypes { Adventure, Action, RolePlay, Simulation, Strategy };
+        private GenreTypes Genre { get; set; }
+
+        public GenreTypes Get_Genre()
+        {
+            return Genre;
+        }
+        public int ReleaseYear { get; set; }
+        public double PopularityPercent { get; set; }
+
+        public Game(string title, GenreTypes genre, int releaseYear, double popularity)
+        {
+            Title = title;
+            Genre = genre;
+            ReleaseYear = releaseYear;
+            PopularityPercent = popularity;
+        }
 
     }
 }
