@@ -14,17 +14,17 @@ namespace GameEngine
         {
             games = new List<Game>()
             {
-                new Game("Minecraft",Game.GenreTypes.Adventure,1997,87),
-                new Game("GrandTheftAuto",Game.GenreTypes.Action,1997,68),
-                new Game("MarioBros",Game.GenreTypes.Adventure,1996,87),
-                new Game("Battlefield",Game.GenreTypes.Strategy,1987,91),
-                new Game("LegendofZelda",Game.GenreTypes.Adventure,1999,32),
-                new Game("Doom",Game.GenreTypes.Action,2018,80),
-                new Game("Fallout",Game.GenreTypes.Adventure,2003,79),
-                new Game("ToTheMoon",Game.GenreTypes.RolePlay,2007,99),
-                new Game("Borderlands",Game.GenreTypes.Simulation,2018,87),
-                new Game("Portal",Game.GenreTypes.Strategy,2018,93),
-                new Game("AssasinsCreed",Game.GenreTypes.Adventure,2018,91)
+                new Game("Minecraft",Game.GenreTypes.Adventure,Game.GameTypes.PC, 1997,87),
+                new Game("GrandTheftAuto",Game.GenreTypes.Action,Game.GameTypes.PC,1997,68),
+                new Game("MarioBros",Game.GenreTypes.Adventure,Game.GameTypes.NintendoSwitch,1996,87),
+                new Game("Battlefield",Game.GenreTypes.Strategy,Game.GameTypes.PS4,1987,91),
+                new Game("LegendofZelda",Game.GenreTypes.Adventure,Game.GameTypes.NintendoSwitch,1999,32),
+                new Game("Doom",Game.GenreTypes.Action,Game.GameTypes.PS4,2018,80),
+                new Game("Fallout",Game.GenreTypes.Adventure,Game.GameTypes.PC,2003,79),
+                new Game("ToTheMoon",Game.GenreTypes.RolePlay,Game.GameTypes.PC,2007,99),
+                new Game("Borderlands",Game.GenreTypes.Simulation,Game.GameTypes.PS4,2018,87),
+                new Game("Portal",Game.GenreTypes.Strategy,Game.GameTypes.PC,2018,93),
+                new Game("AssasinsCreed",Game.GenreTypes.Adventure,Game.GameTypes.PS4,2018,91)
             };
         }
 
