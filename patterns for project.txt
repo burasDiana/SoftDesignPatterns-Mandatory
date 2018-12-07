@@ -10,10 +10,10 @@ simulates a machine on which you could play all kinds of games
 - it can list them
 - order them
 - 'play' them
-filter an object list for ex. => steam - online version
-			      => dvd for PC
+filter an object list for ex. => PC
 			      => XBOX
 			      => Nintendo
+			      => PS4
 
 state pattern =  strategy pattern
 
