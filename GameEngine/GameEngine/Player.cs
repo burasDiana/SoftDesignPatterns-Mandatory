@@ -20,9 +20,26 @@ namespace GameEngine
             return _instance;
         }
 
-        public void DoStuff(Game game)
+        //instance of adapter class
+        ConsolePlayerAdapter consolePlayerAdapter;
+
+        public void PlayGame(Game.GameTypes type ,Game game)
         {
-            Console.WriteLine("Playing " + game.Title);
+            // built in PC support
+            if (type == Game.GameTypes.PC)
+            {
+                Console.WriteLine("Playing " +  game.Title  + " on PC.");
+            }
+            // adapter provides support for simulating playing a console game
+            else if( type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)
+            {
+                consolePlayerAdapter = new ConsolePlayerAdapter(type);
+                consolePlayerAdapter.Play(type,game);
+            }
+            else if(type == Game.GameTypes.Undefined)
+            {
+                Console.WriteLine("Invalid game type not supported.");
+            }
         }
     }
 }
