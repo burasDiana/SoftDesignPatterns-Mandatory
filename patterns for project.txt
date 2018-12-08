@@ -15,6 +15,9 @@ filter an object list for ex. => PC
 			      => Nintendo
 			      => PS4
 
+states  -> standby
+	-> play game
+	-> view games (order, list them, etc.)
 state pattern =  strategy pattern
 
 ( list of games) 
