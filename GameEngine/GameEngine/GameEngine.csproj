@@ -54,12 +54,14 @@
     <Compile Include="PlayerMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatePattern\DisplayState.cs" />
+    <Compile Include="StatePattern\PlayState.cs" />
+    <Compile Include="StatePattern\StandbyState.cs" />
+    <Compile Include="StatePattern\State.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="StatePattern\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

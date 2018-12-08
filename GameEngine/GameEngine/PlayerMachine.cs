@@ -17,7 +17,7 @@ namespace GameEngine
         //private constructor so class cannot be instantiated
         private PlayerMachine()
         {
-            this._state = null;
+            this._state = new StandbyState() ;
         }
 
         //get the only PlayerMachine object
