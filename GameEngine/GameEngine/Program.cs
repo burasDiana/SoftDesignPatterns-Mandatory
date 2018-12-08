@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GameEngine.DecoratorPattern;
+using GameEngine.StatePattern;
 
 namespace GameEngine
 {
@@ -20,8 +21,25 @@ namespace GameEngine
             ////get the only PlayerMachine object
             PlayerMachine playerMachine = PlayerMachine.getInstance();
 
-            //AdapterPattern
-            //playerMachine.PlayGame(Game.GameTypes.PS4, data.GetGames().FirstOrDefault(g => g.Title =="Doom") );
+            #region StatePattern
+            //DisplayState displayMode = new DisplayState();
+            //PlayState playMode = new PlayState();
+            //StandbyState standby = new StandbyState();
+
+            //Get_Machine_Current_State(playerMachine);
+
+            //displayMode.DoAction(playerMachine);
+
+            //Get_Machine_Current_State(playerMachine);
+
+            //playMode.DoAction(playerMachine);
+
+            //Get_Machine_Current_State(playerMachine); 
+            #endregion
+
+            #region AdapterPattern
+            //playerMachine.PlayGame(Game.GameTypes.PS4, data.GetGames().FirstOrDefault(g => g.Title =="Doom") ); 
+            #endregion
 
             #region FilterPattern
             //FilterCriteria adventure = new CriteriaAdventure();
@@ -56,6 +74,10 @@ namespace GameEngine
             Console.ReadLine();
         }
 
+        public static void Get_Machine_Current_State(PlayerMachine playerMachine)
+        {
+            Console.WriteLine(playerMachine.GetState().ToString());
+        }
         public static void PrintResults(List<Game> filteredGames)
         {
             foreach (var game in filteredGames)
