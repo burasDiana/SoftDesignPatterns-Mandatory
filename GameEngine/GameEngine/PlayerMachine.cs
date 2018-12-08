@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace GameEngine
 {
-    class Player
+    class PlayerMachine
     {
-        //create a Player object
-        private static Player _instance = new Player();
+        //create a PlayerMachine object
+        private static PlayerMachine _instance = new PlayerMachine();
 
         //private constructor so class cannot be instantiated
-        private Player() { }
+        private PlayerMachine() { }
 
-        //get the only Player object
-        public static Player getInstance()
+        //get the only PlayerMachine object
+        public static PlayerMachine getInstance()
         {
             return _instance;
         }
