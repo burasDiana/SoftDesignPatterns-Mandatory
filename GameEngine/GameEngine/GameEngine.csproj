@@ -42,17 +42,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvancedConsolePlayer.cs" />
-    <Compile Include="ConsolePlayerAdapter.cs" />
+    <Compile Include="AdapterPattern\AdvancedConsolePlayer.cs" />
+    <Compile Include="AdapterPattern\ConsolePlayerAdapter.cs" />
     <Compile Include="DataSource.cs" />
-    <Compile Include="FilterCriteria.cs" />
+    <Compile Include="DecoratorPattern\Decorator.cs" />
+    <Compile Include="DecoratorPattern\DLC.cs" />
+    <Compile Include="DecoratorPattern\Game_DLC.cs" />
+    <Compile Include="DecoratorPattern\PlayableDLC.cs" />
+    <Compile Include="FilterPattern\FilterCriteria.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="PlayerMachine.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="StatePattern\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
