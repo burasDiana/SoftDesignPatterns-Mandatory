@@ -8,6 +8,7 @@ namespace GameEngine
 {
     public class Game
     {
+        public int Id { get; set; }
         public string Title { get; set; } //generates auto-property
         public enum GenreTypes { Undefined, Adventure, Action, RolePlay, Simulation, Strategy };
         public enum GameTypes { Undefined , PC, NintendoSwitch, PS4, XBox};
@@ -23,15 +24,16 @@ namespace GameEngine
             return Type;
         }
         public int ReleaseYear { get; set; }
-        public double PopularityPercent { get; set; }
+        public double PopularityRating { get; set; }
 
-        public Game(string title, GenreTypes genre, GameTypes type, int releaseYear, double popularity)
+        public Game(int id, string title, GenreTypes genre, GameTypes type, int releaseYear, double popularity)
         {
+            Id = id;
             Title = title;
             Genre = genre;
             Type = type;
             ReleaseYear = releaseYear;
-            PopularityPercent = popularity;
+            PopularityRating = popularity;
         }
     }
 }
