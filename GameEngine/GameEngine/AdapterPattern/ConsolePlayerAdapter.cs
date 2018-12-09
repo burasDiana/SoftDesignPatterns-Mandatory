@@ -28,17 +28,17 @@ namespace GameEngine
         }
 
         // play method of adapter which calls the playmethod of each type's class
-        public void Play(Game.GameTypes type, Game game)
+        public void Play(Game game)
         {
-            if (type == Game.GameTypes.NintendoSwitch)
+            if (game.Get_Type() == Game.GameTypes.NintendoSwitch)
             {
                 advancedConsolePlayer.PlayNintendo(game);
             }
-            else if (type == Game.GameTypes.PS4)
+            else if (game.Get_Type() == Game.GameTypes.PS4)
             {
                 advancedConsolePlayer.PlayPS4(game);
             }
-            else if (type == Game.GameTypes.XBox)
+            else if (game.Get_Type() == Game.GameTypes.XBox)
             {
                 advancedConsolePlayer.PlayXbox(game);
             }

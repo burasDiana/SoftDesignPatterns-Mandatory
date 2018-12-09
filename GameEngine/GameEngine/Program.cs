@@ -38,7 +38,7 @@ namespace GameEngine
             #endregion
 
             #region AdapterPattern
-            //playerMachine.PlayGame(Game.GameTypes.PS4, data.GetGames().FirstOrDefault(g => g.Title =="Doom") ); 
+            //playerMachine.PlayGame(data.GetGames().FirstOrDefault(g => g.Title =="Doom") ); 
             #endregion
 
             #region FilterPattern

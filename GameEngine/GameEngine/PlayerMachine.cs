@@ -39,23 +39,26 @@ namespace GameEngine
         //instance of adapter class
         ConsolePlayerAdapter consolePlayerAdapter;
 
-        public void PlayGame(Game.GameTypes type ,Game game)
+        public void PlayGame(Game game)
         {
+            Game.GameTypes type = game.Get_Type();
+
             // built in PC support
             if (type == Game.GameTypes.PC)
             {
-                Console.WriteLine("Playing " +  game.Title  + " on PC.");
+                Console.WriteLine("Playing " + game.Title + " on PC.");
+                return;
             }
+
             // adapter provides support for simulating playing a console game
-            else if( type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)
+            if (type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)
             {
                 consolePlayerAdapter = new ConsolePlayerAdapter(type);
-                consolePlayerAdapter.Play(type,game);
+                consolePlayerAdapter.Play(game);
+                return;
             }
-            else if(type == Game.GameTypes.Undefined)
-            {
-                Console.WriteLine("Invalid game type not supported.");
-            }
+
+            Console.WriteLine("Invalid game type " + game.Get_Type() + " not supported.");
         }
     }
 }
