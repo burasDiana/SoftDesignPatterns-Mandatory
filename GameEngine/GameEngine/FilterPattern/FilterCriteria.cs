@@ -11,6 +11,7 @@ namespace GameEngine
         List<Game> MeetCriteria(List<Game> games);
     }
 
+    //filter by genre
     public class CriteriaAdventure : FilterCriteria
     {
         public List<Game> MeetCriteria(List<Game> games)
@@ -65,6 +66,80 @@ namespace GameEngine
         }
     }
 
+    //filter by game type
+    public class CriteriaPS4 : FilterCriteria
+    {
+        public List<Game> MeetCriteria(List<Game> games)
+        {
+
+            List<Game> PS4Games = new List<Game>();
+
+            foreach (var g in games)
+            {
+                if (g.Get_Type() == Game.GameTypes.PS4)
+                {
+                    PS4Games.Add(g);
+                }
+            }
+            return PS4Games;
+        }
+    }
+
+    public class CriteriaNintendo : FilterCriteria
+    {
+        public List<Game> MeetCriteria(List<Game> games)
+        {
+
+            List<Game> NintendoGames = new List<Game>();
+
+            foreach (var g in games)
+            {
+                if (g.Get_Type() == Game.GameTypes.NintendoSwitch)
+                {
+                    NintendoGames.Add(g);
+                }
+            }
+            return NintendoGames;
+        }
+    }
+
+    public class CriteriaXbox : FilterCriteria
+    {
+        public List<Game> MeetCriteria(List<Game> games)
+        {
+
+            List<Game> XboxGames = new List<Game>();
+
+            foreach (var g in games)
+            {
+                if (g.Get_Type() == Game.GameTypes.XBox)
+                {
+                    XboxGames.Add(g);
+                }
+            }
+
+            return XboxGames;
+        }
+    }
+
+    public class CriteriaPC : FilterCriteria
+    {
+        public List<Game> MeetCriteria(List<Game> games)
+        {
+
+            List<Game> PCGames = new List<Game>();
+
+            foreach (var g in games)
+            {
+                if (g.Get_Type() == Game.GameTypes.PC)
+                {
+                    PCGames.Add(g);
+                }
+            }
+            return PCGames;
+        }
+    }
+
     public class Criteria90S : FilterCriteria
     {
         public List<Game> MeetCriteria(List<Game> games)
@@ -83,6 +158,7 @@ namespace GameEngine
         }
     }
 
+    //filter by other
     public class CriteriaThisYear : FilterCriteria
     {
         public List<Game> MeetCriteria(List<Game> games)
@@ -121,6 +197,7 @@ namespace GameEngine
         }
     }
 
+    //combine filters
     public class AndCriteria : FilterCriteria
     {
         private FilterCriteria criteria1;
