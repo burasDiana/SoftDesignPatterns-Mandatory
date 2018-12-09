@@ -14,6 +14,11 @@ namespace GameEngine
     //filter by genre
     public class CriteriaAdventure : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "Adventure";
+        }
+
         public List<Game> MeetCriteria(List<Game> games)
         {
              
@@ -28,10 +33,14 @@ namespace GameEngine
             }
             return adventureGames;
         }
-    }
+    } // 1
 
     public class CriteriaAction : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "Action";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -46,10 +55,14 @@ namespace GameEngine
             }
             return actionGames;
         }
-    }
+    } //2
 
     public class CriteriaRolePlay : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "RolePlay";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -64,11 +77,15 @@ namespace GameEngine
             }
             return rolePlayGames;
         }
-    }
+    } //3
 
     //filter by game type
     public class CriteriaPS4 : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "PS4";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -83,10 +100,14 @@ namespace GameEngine
             }
             return PS4Games;
         }
-    }
+    } //4
 
     public class CriteriaNintendo : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "Nintendo";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -101,10 +122,14 @@ namespace GameEngine
             }
             return NintendoGames;
         }
-    }
+    } //5
 
     public class CriteriaXbox : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "Xbox";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -120,10 +145,14 @@ namespace GameEngine
 
             return XboxGames;
         }
-    }
+    } //6
 
     public class CriteriaPC : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "PC";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -138,10 +167,14 @@ namespace GameEngine
             }
             return PCGames;
         }
-    }
+    } //7
 
     public class Criteria90S : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "90's";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -156,11 +189,15 @@ namespace GameEngine
             }
             return games90s;
         }
-    }
+    } //8
 
     //filter by other
     public class CriteriaThisYear : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "This year";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
@@ -175,17 +212,21 @@ namespace GameEngine
             }
             return gamesThisYear;
         }
-    }
+    } //9
 
     public class CriteriaTop5 : FilterCriteria
     {
+        public override string ToString()
+        {
+            return "Top 5 Rated";
+        }
         public List<Game> MeetCriteria(List<Game> games)
         {
 
             List<Game> gamesTop5 = new List<Game>();
 
             int count = 0;
-            foreach (var g in games.OrderByDescending(g => g.PopularityPercent)) 
+            foreach (var g in games.OrderByDescending(g => g.PopularityRating)) 
             {
                 if (count <= 5 )
                 {
@@ -195,7 +236,7 @@ namespace GameEngine
             }
             return gamesTop5;
         }
-    }
+    } //10
 
     //combine filters
     public class AndCriteria : FilterCriteria
@@ -203,6 +244,10 @@ namespace GameEngine
         private FilterCriteria criteria1;
         private FilterCriteria criteria2;
 
+        public override string ToString()
+        {
+            return criteria1 + " and " + criteria2;
+        }
         public AndCriteria (FilterCriteria criteria1, FilterCriteria criteria2)
         {
             this.criteria1 = criteria1;
@@ -214,13 +259,16 @@ namespace GameEngine
             List<Game> firstCriteriaGames = criteria1.MeetCriteria(games);
             return criteria2.MeetCriteria(firstCriteriaGames);
         }
-    }
+    }//and
 
     public class OrCriteria : FilterCriteria
     {
         private FilterCriteria criteria1;
         private FilterCriteria criteria2;
-
+        public override string ToString()
+        {
+            return criteria1 + " or " + criteria2;
+        }
         public OrCriteria(FilterCriteria criteria1, FilterCriteria criteria2)
         {
             this.criteria1 = criteria1;
@@ -241,6 +289,6 @@ namespace GameEngine
             }
             return firstCriteriaGames;
         }
-    }
+    }//or
 
 }
