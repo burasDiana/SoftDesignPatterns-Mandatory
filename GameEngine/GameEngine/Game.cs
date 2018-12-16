@@ -14,6 +14,8 @@ namespace GameEngine
         public enum GameTypes { Undefined , PC, NintendoSwitch, PS4, XBox};
         private GenreTypes Genre { get; }
         private GameTypes Type { get; }
+        public int ReleaseYear { get; set; }
+        public double PopularityRating { get; set; }
 
         public GenreTypes Get_Genre()
         {
@@ -23,9 +25,7 @@ namespace GameEngine
         {
             return Type;
         }
-        public int ReleaseYear { get; set; }
-        public double PopularityRating { get; set; }
-
+        
         public Game(int id, string title, GenreTypes genre, GameTypes type, int releaseYear, double popularity)
         {
             Id = id;
