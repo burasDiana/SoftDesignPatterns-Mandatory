@@ -138,6 +138,33 @@ namespace GameEngine
                     {
                         playMode.DoAction(playerMachine);
                         playerMachine.PlayGame(data.GetGames().FirstOrDefault(g => g.Id == input));
+
+                        if (input == 7) // ask to play a DLC for this game
+                        {
+                            Console.WriteLine("\n This game has DLC available. Press 1 to play.");
+                            var inp = Console.ReadLine();
+                            if (!IsInputString(inp) && Int32.Parse(inp) == 1)
+                            {
+                                // decorator pattern
+
+                                //get the game for which we want to play a DLC
+                                Game originalGame = data.GetGames().FirstOrDefault(g => g.Id == input);
+
+                                //create the dlc linked to the originalGame
+                                Game_DLC fallout_DLC = new Game_DLC(originalGame.Title, "NewVegas");
+
+                                //Make the DLC for game playable
+                                PlayableDLC playableDLC = new PlayableDLC(fallout_DLC);
+
+                                //play DLC
+                                playableDLC.Play_Dlc();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Input invalid");
+                            }
+                        }
+
                     }
 
                     Console.WriteLine("\n \nPress enter to go back to display mode.");
@@ -208,6 +235,7 @@ namespace GameEngine
             return newCriteria;
         }
 
+        // checks if input is a string
         private static bool IsInputString(string input)
         {
             int val;
@@ -218,6 +246,7 @@ namespace GameEngine
             return true;
         }
 
+        // returns -1  if input is not integer
         public static int GetInput()
         {
             int a;
@@ -228,6 +257,7 @@ namespace GameEngine
             return -1;
         }
 
+        // checks if id is withing the game ids in the list
         public static bool IsIdValid(int id)
         {
             if (id > 0 && id < 12)
