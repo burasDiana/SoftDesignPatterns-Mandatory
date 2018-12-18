@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{18A78B14-FAFB-4B33-B8FF-C12BCDF1E9DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePatternDemo", "StatePatternDemo\StatePatternDemo.csproj", "{DD9E7A33-B7BB-4021-8140-9BB9DA90C2BA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{18A78B14-FAFB-4B33-B8FF-C12BCDF1E9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18A78B14-FAFB-4B33-B8FF-C12BCDF1E9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18A78B14-FAFB-4B33-B8FF-C12BCDF1E9DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD9E7A33-B7BB-4021-8140-9BB9DA90C2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD9E7A33-B7BB-4021-8140-9BB9DA90C2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD9E7A33-B7BB-4021-8140-9BB9DA90C2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD9E7A33-B7BB-4021-8140-9BB9DA90C2BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
