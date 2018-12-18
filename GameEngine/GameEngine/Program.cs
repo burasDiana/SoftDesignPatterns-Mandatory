@@ -153,7 +153,7 @@ namespace GameEngine
                                 //create the dlc linked to the originalGame
                                 Game_DLC fallout_DLC = new Game_DLC(originalGame.Title, "NewVegas");
 
-                                //Make the DLC for game playable
+                                //Make the DLC for game playable / wrap dlc in playable
                                 PlayableDLC playableDLC = new PlayableDLC(fallout_DLC);
 
                                 //play DLC
