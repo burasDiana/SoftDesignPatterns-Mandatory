@@ -12,7 +12,7 @@ namespace GameEngine
     {
         static void Main(string[] args)
         {
-            //illegal construct
+            //illegal construct example
             //PlayerMachine player = new PlayerMachine();
             bool flag = true;
             //games data set
