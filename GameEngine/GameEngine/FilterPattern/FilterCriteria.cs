@@ -228,7 +228,7 @@ namespace GameEngine
             int count = 0;
             foreach (var g in games.OrderByDescending(g => g.PopularityRating)) 
             {
-                if (count <= 5 )
+                if (count < 5 )
                 {
                     gamesTop5.Add(g);
                     count++;
