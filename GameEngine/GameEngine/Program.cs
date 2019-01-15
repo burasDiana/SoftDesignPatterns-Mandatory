@@ -166,6 +166,10 @@ namespace GameEngine
                         }
 
                     }
+                    Console.ReadKey();
+                    Console.WriteLine();
+
+                    standby.DoAction(playerMachine);
 
                     Console.WriteLine("\n \nPress enter to go back to display mode.");
                     Console.ReadLine();
