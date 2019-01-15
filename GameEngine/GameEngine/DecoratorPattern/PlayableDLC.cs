@@ -16,7 +16,7 @@ namespace GameEngine.DecoratorPattern
 
         public override void Play_Dlc()
         {
-            Console.WriteLine("Making DLC Playable: ");
+            Console.WriteLine("Enviroment is now: Dusty Vegas");
             base.Play_Dlc();
         }
     }
