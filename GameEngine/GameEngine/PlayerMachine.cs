@@ -51,7 +51,8 @@ namespace GameEngine
             }
 
             //UNCOMMENT THIS
-            // adapter provides support for simulating playing a console game
+            // adapter provides support for simulating playing on other platforms
+
             //if (type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)
             //{
             //    consolePlayerAdapter = new ConsolePlayerAdapter(type);
