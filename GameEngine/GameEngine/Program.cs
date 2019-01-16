@@ -177,24 +177,6 @@ namespace GameEngine
 
             }
 
-            #region AdapterPattern
-            //playerMachine.PlayGame(data.GetGames().FirstOrDefault(g => g.Title =="Doom") ); 
-            #endregion
-
-            #region DecoratorPattern
-
-            ////get the game for which we want to play a DLC
-            //Game originalGame = data.GetGames().FirstOrDefault(g => g.Title == "Fallout");
-
-            ////create the dlc linked to the originalGame
-            //Game_DLC fallout_DLC = new Game_DLC(originalGame.Title, "NewVegas");
-
-            ////Make the game playable
-            //PlayableDLC playableDLC = new PlayableDLC(fallout_DLC);
-
-            //playableDLC.Play_Dlc();
-            #endregion
-
             Console.WriteLine("\n Press any key to exit.");
             Console.ReadLine();
         }
