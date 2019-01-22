@@ -53,12 +53,12 @@ namespace GameEngine
             //UNCOMMENT THIS
             // adapter provides support for simulating playing on other platforms
 
-            //if (type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)
-            //{
-            //    consolePlayerAdapter = new ConsolePlayerAdapter(type);
-            //    consolePlayerAdapter.Play(game);
-            //    return;
-            //}
+            if (type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)
+            {
+                consolePlayerAdapter = new ConsolePlayerAdapter(type);
+                consolePlayerAdapter.Play(game);
+                return;
+            }
 
             Console.WriteLine("Invalid game type " + game.Get_Type() + " not supported.");
         }
