@@ -291,4 +291,6 @@ namespace GameEngine
         }
     }//or
 
+    //add exclusion criteria
+
 }
