@@ -243,7 +243,7 @@ namespace GameEngine
             return -1;
         }
 
-        // checks if id is withing the game ids in the list
+        // checks if id is within the game id existent
         public static bool IsIdValid(int id)
         {
             if (id > 0 && id < 12)
