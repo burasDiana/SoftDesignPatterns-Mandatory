@@ -239,7 +239,7 @@ namespace GameEngine
     } //10
 
     //combine filters
-    public class AndCriteria : FilterCriteria
+    public class AndCriteria : FilterCriteria // intersection of 2 sets of elements
     {
         private FilterCriteria criteria1;
         private FilterCriteria criteria2;
