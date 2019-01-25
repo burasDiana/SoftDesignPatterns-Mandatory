@@ -25,7 +25,7 @@ namespace GameEngine
                 new Game(9,"Borderlands",Game.GenreTypes.Simulation,Game.GameTypes.PS4,2018,87),
                 new Game(10,"Portal",Game.GenreTypes.Strategy,Game.GameTypes.PC,2018,93),
                 new Game(11,"AssasinsCreed",Game.GenreTypes.Adventure,Game.GameTypes.PS4,2018,91),
-                new Game(11,"Inside",Game.GenreTypes.Adventure,Game.GameTypes.PC,2014,92)
+                new Game(12,"Inside",Game.GenreTypes.Adventure,Game.GameTypes.PC,2014,92)
             };
         }
 
