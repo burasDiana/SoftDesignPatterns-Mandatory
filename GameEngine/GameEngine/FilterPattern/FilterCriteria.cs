@@ -261,7 +261,7 @@ namespace GameEngine
         }
     }//and
 
-    public class OrCriteria : FilterCriteria
+    public class OrCriteria : FilterCriteria // union of 2 sets of elements
     {
         private FilterCriteria criteria1;
         private FilterCriteria criteria2;
