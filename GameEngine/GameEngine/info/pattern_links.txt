@@ -4,3 +4,5 @@ https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
 
 https://www.tutorialspoint.com/design_pattern/filter_pattern.htm
 
+https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm
+
