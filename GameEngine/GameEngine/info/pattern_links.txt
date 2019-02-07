@@ -6,3 +6,4 @@ https://www.tutorialspoint.com/design_pattern/filter_pattern.htm
 
 https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm
 
+https://www.tutorialspoint.com/design_pattern/state_pattern.htm
