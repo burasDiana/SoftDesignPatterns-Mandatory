@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngine.StatePattern
 {
+    //this class represents the standby state of the machine
     class StandbyState : State
     {
         public void DoAction(PlayerMachine machine)
