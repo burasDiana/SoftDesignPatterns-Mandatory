@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngine
 {
+    // interface to be implemented by the criteria classes
     public interface FilterCriteria
     {
         List<Game> MeetCriteria(List<Game> games);
