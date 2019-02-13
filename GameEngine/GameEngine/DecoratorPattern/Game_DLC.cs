@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngine.DecoratorPattern
 {
+    // object to decorate 
     class Game_DLC : DLC
     {
         private string _title;
