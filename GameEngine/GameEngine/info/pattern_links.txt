@@ -1,3 +1,5 @@
+Links to all the patterns used in the project:
+
 https://www.tutorialspoint.com/design_pattern/adapter_pattern.htm
 
 https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm
