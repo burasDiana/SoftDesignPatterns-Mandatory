@@ -50,7 +50,7 @@ namespace GameEngine
                 return;
             }
 
-            //UNCOMMENT THIS
+            //UNCOMMENT THIS FOR DEMO
             // adapter provides support for simulating playing on other platforms
 
             if (type == Game.GameTypes.NintendoSwitch || type == Game.GameTypes.PS4 || type == Game.GameTypes.XBox)

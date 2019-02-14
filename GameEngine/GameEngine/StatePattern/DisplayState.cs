@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngine.StatePattern
 {
+    //this class represents the display state of the machine
     class DisplayState : State
     {
         public void DoAction(PlayerMachine machine)
