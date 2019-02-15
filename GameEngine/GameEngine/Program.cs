@@ -116,8 +116,7 @@ namespace GameEngine
                     {
                         Console.WriteLine(finalCriteria + " Games :");
                         PrintResults(finalCriteria.MeetCriteria(data.GetGames()));
-                        canPlayGame = true;
-                        //flag = false;
+                        canPlayGame = true;  
                     }
                 }
                 else //input was not 2 or 1
