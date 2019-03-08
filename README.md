@@ -1,2 +1,8 @@
 # SoftDesignPatterns-Mandatory
-Application with 4 design patterns for Software Design Patterns course
+Application with minimum four design patterns for Software Design Patterns final project
+
+# Design patterns used 
+`Adapter Pattern`
+`Decorator Pattern`
+`Singleton Patter`
+`Filter Pattern`
