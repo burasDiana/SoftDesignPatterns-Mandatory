@@ -4,5 +4,5 @@ Application with minimum four design patterns for Software Design Patterns final
 # Design patterns used 
 `Adapter Pattern`
 `Decorator Pattern`
-`Singleton Patter`
+`Singleton Pattern`
 `Filter Pattern`
