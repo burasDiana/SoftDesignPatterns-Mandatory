@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngine.DecoratorPattern
 {
+    //this class represents the decorator object used to add additional functionality to an object
     abstract class Decorator : DLC
     {
         protected DLC dlc;

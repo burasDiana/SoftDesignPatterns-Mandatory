@@ -1,5 +1,9 @@
 # SoftDesignPatterns-Mandatory
-Application with 4 design patterns for Software Design Patterns course
+Application which simulates a universal game console. It uses different design patterns learned in the Software Design Patterns course
 
-## Instructions
-Open project with Visual Studio. Press F5 to run project.
+# Design patterns used 
+`Adapter Pattern`
+`Decorator Pattern`
+`Singleton Pattern`
+`Filter Pattern`
+`State Pattern`
