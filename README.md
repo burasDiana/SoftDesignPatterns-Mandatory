@@ -1,5 +1,5 @@
 # SoftDesignPatterns-Mandatory
-Application with minimum four design patterns for Software Design Patterns final project
+Application which simulates a universal game console. It uses different design patterns learned in the Software Design Patterns course
 
 # Design patterns used 
 `Adapter Pattern`
