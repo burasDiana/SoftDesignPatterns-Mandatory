@@ -7,6 +7,7 @@ using GameEngine.StatePattern;
 
 namespace GameEngine
 {
+	//this class represents the universal player machine which can be used to play a game
     class PlayerMachine
     {
         //create a PlayerMachine object
