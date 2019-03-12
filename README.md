@@ -6,3 +6,4 @@ Application which simulates a universal game console. It uses different design p
 `Decorator Pattern`
 `Singleton Pattern`
 `Filter Pattern`
+`State Pattern`
