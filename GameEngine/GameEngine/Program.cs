@@ -22,12 +22,13 @@ namespace GameEngine
             Console.WriteLine("Performing machine setup...");
             PlayerMachine playerMachine = PlayerMachine.getInstance();
 
-            //state pattern
+            //state pattern -- set up the different machine states
             DisplayState displayMode = new DisplayState();
             PlayState playMode = new PlayState();
             StandbyState standby = new StandbyState();
 
             Console.WriteLine("Setup complete. Current mode: ");
+			//get machine base state
             Get_Machine_Current_State(playerMachine);
 
             while (flag)
@@ -126,7 +127,7 @@ namespace GameEngine
 
                 if (canPlayGame)
                 {
-                    //play a game 
+                    //select a game 
                     Console.WriteLine("Write the id of the game you wish to play: ");
                     input = GetInput();
                     if (input <= 0 || input > 11)
@@ -135,7 +136,10 @@ namespace GameEngine
                     }
                     else
                     {
+						// valid id, switch to play mode
                         playMode.DoAction(playerMachine);
+						
+						//play game
                         playerMachine.PlayGame(data.GetGames().FirstOrDefault(g => g.Id == input));
 
                         if (input == 7) // ask to play a DLC for this game
@@ -167,7 +171,10 @@ namespace GameEngine
                     }
                     Console.ReadKey();
                     Console.WriteLine();
-
+					
+					//TODO: add a timer component here
+					
+					// go back to standby
                     standby.DoAction(playerMachine);
 
                     Console.WriteLine("\n \nPress enter to go back to display mode.");
