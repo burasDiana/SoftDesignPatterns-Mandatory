@@ -1,5 +1,5 @@
 # SoftDesignPatterns-Mandatory
-Application which simulates a universal game console. It uses different design patterns learned in the Software Design Patterns course
+This is an application which simulates a universal game console. It uses different design patterns used in the Software Design Patterns course.
 
 # Design patterns used 
 `Adapter Pattern`
@@ -7,3 +7,4 @@ Application which simulates a universal game console. It uses different design p
 `Singleton Pattern`
 `Filter Pattern`
 `State Pattern`
+
