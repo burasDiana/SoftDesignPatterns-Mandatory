@@ -1,5 +1,5 @@
 # SoftDesignPatterns-Mandatory
-This is an application which simulates a universal game console. It uses different design patterns used in the Software Design Patterns course.
+This is an application which simulates a cross platform game console. The console is used to display a list of games, play games for different platforms as well as use dlc's when available for a specific game. It uses different design patterns, learned in the Software Design Patterns course, to implement these features. 
 
 # Design patterns used 
 `Adapter Pattern`
